@@ -7,9 +7,12 @@ class Movie(models.Model):
     year=models.IntegerField()
     img=models.ImageField(upload_to='gallery')
 
+    def __str__(self):
+        return self.name
 
-def __str__(self):
-    return self.name
+
+
+
 
 
 
