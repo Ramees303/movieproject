@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block body%}
+<div class="card-body" >
+  <h1> Add new movie  </h1>
 <form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
-  <input type="text" name="name" placeholder="Enter Movie name">
-  <input type="text" name="desc" placeholder="Enter Movie description">
-  <input type="text" name="year" placeholder="Enter Movie year">
-  <input type="file" name="img">
+  <input type="text" name="name" placeholder="Enter Movie name"> <br>
+  <input type="text" name="desc" placeholder="Enter Movie description"> <br>
+  <input type="text" name="year" placeholder="Enter Movie year"> <br>
+  <input type="file" name="img"><br>
   <input type="submit">
 </form>
+</div>
 {% endblock %}

@@ -17,13 +17,14 @@ def detail(request,movie_id):
     movie=Movie.objects.get(id=movie_id)
     return render(request,'detail.html',{'movie':movie})
 def add_movie(request):
-    if request.method=='POST':
+    if request.method == 'POST':
         name=request.POST.get('name')
         desc=request.POST.get('desc')
         year=request.POST.get('year')
         img=request.FILES['img']
-        movie=Movie(name=name,decs=desc,year=year,img=img)
+        movie=Movie(name=name,desc=desc,year=year,img=img)
         movie.save()
+        return redirect('/')
     return render(request,'add.html')
 
 def update(request,id):

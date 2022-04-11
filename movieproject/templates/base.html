@@ -9,8 +9,9 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
       Sky world
+      <a  class="navbar-brand"  href="{% url 'movieapp:add_movie' %}" > add movie</a>
   </a>
 </nav>
 {% block body %}

@@ -4,10 +4,11 @@
 {% block body %}
 
 <div class="container">
-    <div class="row" style="margin-top:30px; ">
+
+    <div class="row" style="margin-top:30px;  ">
         {% for i in movie_list%}
         <div class="col-md-3">
-            <div class="card" style="width:13vw; height:40vh;" >
+            <div class="card" style="width:13vw; height:40vh; margin-bottom:23px; " >
   <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" style="height:15vh;" >
   <div class="card-body">
     <h5 class="card-title">{{i.name}}</h5>
@@ -18,7 +19,9 @@
         </div>
         {% endfor %}
     </div>
+
 </div>
+
 
 
 
